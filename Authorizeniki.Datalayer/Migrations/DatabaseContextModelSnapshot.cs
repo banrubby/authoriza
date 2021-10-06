@@ -121,7 +121,7 @@ namespace Authorizeniki.Datalayer.Migrations
                         {
                             Id = new Guid("1af8d4a8-0577-4f7b-a917-2083cf3590d7"),
                             FirstName = "Менеджер",
-                            LastName = "Фсея Бесперебойники.рф",
+                            LastName = "Фсея менеджеров.рф",
                             Login = "manager",
                             Password = "manager",
                             RoleId = new Guid("57eb14fb-cfb9-43b6-869d-28bb06e57540"),

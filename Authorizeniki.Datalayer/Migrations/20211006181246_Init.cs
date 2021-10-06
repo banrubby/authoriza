@@ -43,6 +43,26 @@ namespace Authorizeniki.Datalayer.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Events",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    EventTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    RfId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Events", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Events_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "Roles",
                 columns: new[] { "Id", "Name", "Salary" },
@@ -61,7 +81,12 @@ namespace Authorizeniki.Datalayer.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "FirstName", "LastName", "Login", "Password", "RoleId", "Surname" },
-                values: new object[] { new Guid("1af8d4a8-0577-4f7b-a917-2083cf3590d7"), "Менеджер", "Фсея Бесперебойники.рф", "manager", "manager", new Guid("57eb14fb-cfb9-43b6-869d-28bb06e57540"), "Менеджерович" });
+                values: new object[] { new Guid("1af8d4a8-0577-4f7b-a917-2083cf3590d7"), "Менеджер", "Фсея менеджеров.рф", "manager", "manager", new Guid("57eb14fb-cfb9-43b6-869d-28bb06e57540"), "Менеджерович" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Events_UserId",
+                table: "Events",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_Login",
@@ -78,6 +103,9 @@ namespace Authorizeniki.Datalayer.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Events");
+
             migrationBuilder.DropTable(
                 name: "Users");
 
