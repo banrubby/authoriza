@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorizeniki", "Authorizeniki\Authorizeniki.csproj", "{B3D24201-0CC9-4D89-89E0-D36963997F9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorizeniki.Datalayer", "Authorizeniki.Datalayer\Authorizeniki.Datalayer.csproj", "{BE3ABF6B-16B4-4E3A-B45F-F6D2135F1CB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3D24201-0CC9-4D89-89E0-D36963997F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D24201-0CC9-4D89-89E0-D36963997F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D24201-0CC9-4D89-89E0-D36963997F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D24201-0CC9-4D89-89E0-D36963997F9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE3ABF6B-16B4-4E3A-B45F-F6D2135F1CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3ABF6B-16B4-4E3A-B45F-F6D2135F1CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3ABF6B-16B4-4E3A-B45F-F6D2135F1CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3ABF6B-16B4-4E3A-B45F-F6D2135F1CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

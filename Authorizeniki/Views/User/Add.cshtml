@@ -1,0 +1,70 @@
+@model List<SelectListItem>
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+<div>
+    @using (Html.BeginForm("Create", "User", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <table class="add-table">
+            <tr>
+                <td>
+                    <p>Введите имя: </p>
+                </td>
+                <td>
+                    <input type="text" name="FirstName"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Введите фамилию: </p>
+                </td>
+                <td>
+                    <input type="text" name="LastName"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Введите отчество: </p>
+                </td>
+                <td>
+                    <input type="text" name="Surname"/>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <p>Введите логин: </p>
+                </td>
+                <td>
+                    <input type="text" name="Login"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Введите пароль: </p>
+                </td>
+                <td>
+                    <input type="text" name="Password"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Выберите Должность: </p>
+                </td>
+                <td>
+                    @Html.DropDownList("SelectedRoleId", Model,
+                        "Выберите Должность")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Отправить"/>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+</div>

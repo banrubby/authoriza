@@ -1,0 +1,9 @@
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div>
+    <h1 style="text-align: center">Ты не пройдешь!</h1>
+    <a style="display: flex; justify-content: center; padding-bottom: 20px" href="/Account/Login">Войти под другой учетной записью!</a>
+    <a style="display: flex; justify-content: center" href="@ViewData["returnUrl"]">Вернутся обратно на "@ViewData["returnUrl"]"!</a>
+</div>

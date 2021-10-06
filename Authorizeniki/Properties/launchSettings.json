@@ -1,0 +1,15 @@
+﻿{
+  "Authorizeniki": {
+    "commandName": "Project",
+    "launchBrowser": true,
+    "applicationUrl": "http://localhost:5000",
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development",
+      "DbServer": "localhost",
+      "DbPort": "1433",
+      "DbUser": "SA",
+      "DbPassword": "change_this_password",
+      "DbName": "Authorizeniki_Db"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@model Authorizeniki.Models.UserLoginModel;
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+<div>
+    @using (Html.BeginForm("SignIn", "Account", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <input type="hidden" value="@Model.ReturnUrl" name="ReturnUrl"/>
+        <table class="login-table">
+            <tr>
+                <td>
+                    <p>Введите имя </p>
+                </td>
+                <td>
+                    <input type="text" name="Login"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Введите парол </p>
+                </td>
+                <td>
+                    <input type="password" name="Password"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Отправить"/>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+    <h1 style="text-align: center">После авторизации вы будете перемещены обратно на страницу по адресу "@Model.ReturnUrl" </h1>
+</div>

@@ -1,0 +1,34 @@
+@model List<SelectListItem>
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+<div>
+    @using (Html.BeginForm("Create", "Role", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <table class="add-table">
+            <tr>
+                <td>
+                    <p>Введите название должности: </p>
+                </td>
+                <td>
+                    <input type="text" name="Name"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Введите оклад: </p>
+                </td>
+                <td>
+                    <input type="number" name="Salary" step="any" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Создать должность"/>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+</div>

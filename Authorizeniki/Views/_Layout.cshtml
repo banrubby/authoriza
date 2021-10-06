@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Besperboiniki</title>
+    <link rel="stylesheet" href="~/Content/Main.css"/>
+</head>
+<body>
+<table class="navigation-table navigation-table-border">
+    <tr>
+        <td>
+            <h3>
+                Авторизационники
+            </h3>
+        </td>
+        <td>
+            <h3>
+                <a href="/User/Index/">Список пользователей</a>
+            </h3>
+        </td>
+        <td>
+            <h3>
+                <a href="/User/Add/">Добавить пользователей</a>
+            </h3>
+        </td>
+        <td>
+            <h3>
+                <a href="/Role/Add/">Добавить должность</a>
+            </h3>
+        </td>
+        <td>
+            <h3>
+                <a href="/Account/SignOut/">Выход</a>
+            </h3>
+        </td>
+    </tr>
+</table>
+
+<div class="container body-content">
+    <h1 style="text-align: center">Авторизационники.рф</h1>
+    @RenderBody()
+    <hr/>
+    <footer>
+        <p style="text-align: center">&copy; @DateTime.Now.Date.Year - Authorizeniki inc. </p>
+    </footer>
+</div>
+@RenderSection("Scripts", required: false)
+</body>
+</html>
