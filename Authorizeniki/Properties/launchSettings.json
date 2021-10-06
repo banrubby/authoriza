@@ -8,7 +8,7 @@
       "DbServer": "localhost",
       "DbPort": "1433",
       "DbUser": "SA",
-      "DbPassword": "change_this_password",
+      "DbPassword": "Change_this_password",
       "DbName": "Authorizeniki_Db"
     }
   }

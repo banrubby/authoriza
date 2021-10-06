@@ -59,7 +59,7 @@ namespace Authorizeniki.Datalayer
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                $"Server=localhost,1433;Database=Authorizeniki_Db;User ID=SA;Password=change_this_password;Integrated Security=False;Trusted_Connection=False; MultipleActiveResultSets=true");
+                $"Server=localhost,1433;Database=Authorizeniki_Db;User ID=SA;Password=Change_this_password;Integrated Security=False;Trusted_Connection=False; MultipleActiveResultSets=true");
         }
 
         public DbSet<Role> Roles { get; set; }
