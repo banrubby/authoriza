@@ -48,7 +48,7 @@ namespace Authorizeniki.Datalayer
                 Password = "manager",
                 Surname = "Менеджерович",
                 FirstName = "Менеджер",
-                LastName = "Фсея Бесперебойники.рф",
+                LastName = "Фсея менеджеров.рф",
                 RoleId = new Guid("57EB14FB-CFB9-43B6-869D-28BB06E57540")
             });
 

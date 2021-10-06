@@ -46,8 +46,6 @@ namespace Authorizeniki
         {
             DatabaseManagementService.MigrationInitialisation(app);
 
-            app.UseHttpsRedirection();
-
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
